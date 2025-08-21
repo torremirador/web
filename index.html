@@ -36,13 +36,6 @@
         .font-playfair { font-family: 'Playfair Display', serif; }
         .font-inter { font-family: 'Inter', sans-serif; }
         
-        .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://placehold.co/1920x1080/333333/FFFFFF?text=Vista+Panor%C3%A1mica+Torre+Mirador');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        
         .hover-lift {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -87,11 +80,14 @@
             backdrop-filter: blur(10px);
             box-shadow: 0 2px 20px rgba(0,0,0,0.05);
         }
-        .nav-scrolled a, .nav-scrolled .font-playfair {
+        .nav-scrolled a {
             color: #374151; /* text-gray-700 */
         }
         .nav-scrolled a:hover {
             color: #D4AF37; /* text-gold */
+        }
+        .nav-scrolled .header-logo {
+            filter: invert(1); /* Hace el logo blanco visible en fondo blanco */
         }
 
         .bg-cream-pattern {
@@ -121,10 +117,10 @@
 
     <!-- Navigation -->
     <header id="navbar" class="fixed w-full z-50 nav-sticky">
-        <div class="container mx-auto px-6 py-4">
+        <div class="container mx-auto px-6 py-3">
             <div class="flex justify-between items-center">
-                <a href="#inicio" class="font-playfair text-2xl font-bold text-white">
-                    Torre Mirador <span class="text-gold">Coacalco</span>
+                <a href="#inicio">
+                    <img src="https://i.imgur.com/TWtOPgK.png" alt="Torre Mirador Coacalco Logo" class="h-12 w-auto header-logo transition-all duration-300">
                 </a>
                 <nav class="hidden md:flex space-x-8 items-center">
                     <a href="#nosotros" class="text-white hover:text-gold transition-colors">Nosotros</a>
@@ -152,8 +148,13 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="inicio" class="hero-bg min-h-screen flex items-center justify-center text-white">
-        <div class="container mx-auto px-6 text-center">
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
+        <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0" poster="https://placehold.co/1920x1080/333333/FFFFFF?text=Cargando+Video...">
+            <source src="https://i.imgur.com/MqnA1WF.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+        </video>
+        <div class="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
+        <div class="container mx-auto px-6 text-center z-20">
             <h1 class="font-playfair text-5xl md:text-7xl font-bold mb-6">
                 Celebra con la <span class="text-gold">Mejor Vista</span>
             </h1>
@@ -416,7 +417,7 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8 text-center md:text-left">
                 <!-- Column 1: Description -->
                 <div class="lg:col-span-1">
-                    <h3 class="font-playfair text-2xl font-bold mb-4">Torre Mirador <span class="text-gold">Coacalco</span></h3>
+                     <img src="https://i.imgur.com/TWtOPgK.png" alt="Torre Mirador Coacalco Logo" class="h-12 w-auto mb-4 mx-auto md:mx-0">
                     <p class="text-gray-400 text-sm">El lugar perfecto para celebrar tus momentos más especiales con las mejores vistas de Coacalco.</p>
                 </div>
                 <!-- Column 2: Quick Links -->
